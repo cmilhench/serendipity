@@ -1,0 +1,10 @@
+[
+  {"Code":"N", "Name":"North"},
+  {"Code":"NE", "Name":"Northeast"},
+  {"Code":"E", "Name":"East"},
+  {"Code":"SE", "Name":"Southeast"},
+  {"Code":"S", "Name":"South"},
+  {"Code":"SW", "Name":"Southwest"},
+  {"Code":"W", "Name":"West"},
+  {"Code":"NW", "Name":"Northwest"}
+]

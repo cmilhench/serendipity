@@ -1,0 +1,141 @@
+Aardvark
+Aardwolf
+Accentor
+African Buffalo
+African Wild Dog
+Alpaca
+Anaconda
+Ant
+Anteater
+Antelope
+Armadillo
+Baboon
+Badger
+Bandicoot
+Barbet
+Bat
+Bee
+Bee-eater
+Beetle
+Bird
+Bison
+Black-footed Cat
+Black-footed Ferret
+Bluebird
+Boa
+Bowerbird
+Brown Bear
+Bush Dog
+Bushshrike
+Bustard
+Butterfly
+Buzzard
+Caracal
+Caracara
+Cardinal
+Caterpillar
+Cheetah
+Chipmunk
+Civet
+Climbing Mouse
+Clouded Leopard
+Coati
+Cobra
+Cockatoo
+Cockroach
+Common Genet
+Cotton Rat
+Cougar
+Courser
+Coyote
+Crane
+Crane Fly
+Cricket
+Crow
+Culpeo
+Death Adder
+Deer
+Deer Mouse
+Dingo
+Dinosaur
+Dove
+Drongo
+Duck
+Duiker
+Dunnart
+Eagle
+Echidna
+Elephant
+Elk
+Emu
+Falcon
+Finch
+Flea
+Fly
+Flying Frog
+Fox
+Frog
+Frogmouth
+Garter Snake
+Gazelle
+Gecko
+Geoffroy's Cat
+Gerbil
+Giant Tortoise
+Giraffe
+Grasshopper
+Grison
+Groundhog
+Grouse
+Guanaco
+Guinea Pig
+Hamster
+Harrier
+Hartebeest
+Hawk
+Hedgehog
+Helmetshrike
+Hippopotamus
+Hornbill
+Hyena
+Hyrax
+Impala
+Jackal
+Jaguar
+Jaguarundi
+Kangaroo
+Kangaroo Rat
+Kestrel
+Kultarr
+Ladybug
+Leopard
+Lion
+Macaw
+Meerkat
+Mouse
+Newt
+Oryx
+Ostrich
+Owl
+Pangolin
+Pheasant
+Prairie Dog
+Pronghorn
+Przewalski's Horse
+Python
+Quoll
+Rabbit
+Raven
+Rhinoceros
+Shelduck
+Sloth Bear
+Spectacled Bear
+Squirrel
+Starling
+Stick Bug
+Tamandua
+Tasmanian Devil
+Thornbill
+Thrush
+Toad
+Tortoise
