@@ -1,4 +1,4 @@
-package pkg
+package serendipity
 
 import (
 	"bufio"
@@ -103,3 +103,15 @@ func (r *Serendipity) loadData(name string) (*[]Data, error) {
 	store.Set(name, &obj, ttl)
 	return &obj, nil
 }
+
+/*
+ * Top-level convenience functions
+ */
+
+var globalSerendipity = New()
+
+func Seed(seed int64) { globalSerendipity.Seed(seed) }
+
+func Person() *PersonInfo { return globalSerendipity.Person() }
+
+// More TK

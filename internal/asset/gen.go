@@ -27,7 +27,7 @@ func init(){
 
 func main() {
 	fmt.Println("Generating embeded assets")
-	prefix := "../../assets"
+	prefix := "../../assets/data"
 	resources := make(map[string][]byte)
 	err := filepath.Walk(prefix, func(p string, info os.FileInfo, err error) error {
 		if err != nil {

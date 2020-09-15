@@ -1,4 +1,4 @@
-package pkg
+package serendipity
 
 import (
 	"bytes"
@@ -12,7 +12,7 @@ func (r *Serendipity) Name() string {
 	return strings.Trim(fmt.Sprintf("%s %s", r.GivenName(), r.FamilyName()), " ")
 }
 
-func (r *Serendipity) GivenName(gender ...Gender) string {
+func (r *Serendipity) GivenName(gender ...GenderType) string {
 	g := GenderMale
 	if len(gender) > 0 {
 		g = gender[0]
@@ -104,30 +104,30 @@ func (r *Serendipity) Profession() string {
 	return (*obj)[i]
 }
 
-type Person struct {
-	Sub                 string    `json:"sub"`
-	Name                string    `json:"name"`
-	GivenName           string    `json:"given_name"`
-	FamilyName          string    `json:"family_name"`
-	MiddleName          string    `json:"middle_name"`
-	Nickname            string    `json:"nickname"`
-	Username            string    `json:"preferred_username"`
-	Profile             string    `json:"profile"`
-	Picture             string    `json:"picture"`
-	Website             string    `json:"website"`
-	Email               string    `json:"email"`
-	EmailVerified       bool      `json:"email_verified"`
-	Gender              Gender    `json:"gender"`
-	Birthday            time.Time `json:"birthday"`
-	ZoneInfo            string    `json:"zoneinfo"`
-	Locale              string    `json:"locale"`
-	PhoneNumber         string    `json:"phone_number"`
-	PhoneNumberVerified bool      `json:"phone_number_verified"`
-	Address             *Address  `json:"address"`
-	Updated             string    `json:"updated_at"`
+type PersonInfo struct {
+	Sub                 string       `json:"sub"`
+	Name                string       `json:"name"`
+	GivenName           string       `json:"given_name"`
+	FamilyName          string       `json:"family_name"`
+	MiddleName          string       `json:"middle_name"`
+	Nickname            string       `json:"nickname"`
+	Username            string       `json:"preferred_username"`
+	Profile             string       `json:"profile"`
+	Picture             string       `json:"picture"`
+	Website             string       `json:"website"`
+	Email               string       `json:"email"`
+	EmailVerified       bool         `json:"email_verified"`
+	Gender              GenderType   `json:"gender"`
+	Birthday            time.Time    `json:"birthday"`
+	ZoneInfo            string       `json:"zoneinfo"`
+	Locale              string       `json:"locale"`
+	PhoneNumber         string       `json:"phone_number"`
+	PhoneNumberVerified bool         `json:"phone_number_verified"`
+	Address             *AddressInfo `json:"address"`
+	Updated             string       `json:"updated_at"`
 }
 
-func (r *Serendipity) Person() *Person {
+func (r *Serendipity) Person() *PersonInfo {
 	gender := r.Gender()
 	givenName := r.GivenName(gender)
 	middleName := ""
@@ -144,7 +144,7 @@ func (r *Serendipity) Person() *Person {
 		}
 	}
 	name := strings.Join(parts, " ")
-	person := Person{
+	person := PersonInfo{
 		Sub:                 r.UUID(),
 		Name:                name,
 		GivenName:           givenName,

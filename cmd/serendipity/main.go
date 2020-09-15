@@ -9,7 +9,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/cmilhench/serendipity/pkg"
+	"github.com/cmilhench/serendipity"
 )
 
 var revision = "latest"
@@ -56,10 +56,10 @@ func personCommand() {
 	h.Write([]byte(*seed))
 	num := binary.BigEndian.Uint64(h.Sum(nil))
 
-	r := pkg.New()
+	r := serendipity.New()
 	r.Seed(int64(num))
 
-	var p *pkg.Person
+	var p *serendipity.PersonInfo
 
 	fmt.Print("[\n")
 	for i := 0; i < int(*count); i++ {

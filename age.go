@@ -1,4 +1,4 @@
-package pkg
+package serendipity
 
 import (
 	"bytes"
@@ -7,17 +7,17 @@ import (
 	"time"
 )
 
-type AgeRange int
+type AgeRangeType int
 
 const (
-	AgeRangeUnknown AgeRange = iota
+	AgeRangeUnknown AgeRangeType = iota
 	AgeRangeChild
 	AgeRangeTeen
 	AgeRangeAdult
 	AgeRangeSenior
 )
 
-var ageRangeText = map[AgeRange]string{
+var ageRangeText = map[AgeRangeType]string{
 	AgeRangeUnknown: "Unknown",
 	AgeRangeChild:   "Child",
 	AgeRangeTeen:    "Teen",
@@ -25,7 +25,7 @@ var ageRangeText = map[AgeRange]string{
 	AgeRangeSenior:  "Senior",
 }
 
-var ageRangeAge = map[AgeRange][]int{
+var ageRangeAge = map[AgeRangeType][]int{
 	AgeRangeUnknown: []int{0, 115},
 	AgeRangeChild:   []int{0, 12},
 	AgeRangeTeen:    []int{13, 18},
@@ -33,18 +33,18 @@ var ageRangeAge = map[AgeRange][]int{
 	AgeRangeSenior:  []int{65, 115},
 }
 
-func AgeRangeText(code AgeRange) string {
+func AgeRangeText(code AgeRangeType) string {
 	return ageRangeText[code]
 }
 
-func (enum AgeRange) String() string {
+func (enum AgeRangeType) String() string {
 	if val, ok := ageRangeText[enum]; ok {
 		return val
 	}
 	return ageRangeText[AgeRangeUnknown]
 }
 
-func (s *AgeRange) Scan(value interface{}) error {
+func (s *AgeRangeType) Scan(value interface{}) error {
 	*s = AgeRangeUnknown
 	bytes, ok := value.([]byte)
 	if !ok {
@@ -63,18 +63,18 @@ func (s *AgeRange) Scan(value interface{}) error {
 	return nil
 }
 
-func (s AgeRange) Value() (driver.Value, error) {
+func (s AgeRangeType) Value() (driver.Value, error) {
 	return AgeRangeText(s), nil
 }
 
-func (s AgeRange) MarshalJSON() ([]byte, error) {
+func (s AgeRangeType) MarshalJSON() ([]byte, error) {
 	buffer := bytes.NewBufferString(`"`)
 	buffer.WriteString(AgeRangeText(s))
 	buffer.WriteString(`"`)
 	return buffer.Bytes(), nil
 }
 
-func (s *AgeRange) UnmarshalJSON(b []byte) error {
+func (s *AgeRangeType) UnmarshalJSON(b []byte) error {
 	var j string
 	err := json.Unmarshal(b, &j)
 	if err != nil {
@@ -83,15 +83,15 @@ func (s *AgeRange) UnmarshalJSON(b []byte) error {
 	return s.Scan([]byte(j))
 }
 
-func (s *AgeRange) Min() int {
+func (s *AgeRangeType) Min() int {
 	return ageRangeAge[*s][0]
 }
 
-func (s *AgeRange) Max() int {
+func (s *AgeRangeType) Max() int {
 	return ageRangeAge[*s][1]
 }
 
-func (r *Serendipity) AgeRange() AgeRange {
+func (r *Serendipity) AgeRange() AgeRangeType {
 	if r.Bool(.2) {
 		if r.Bool(.3) {
 			return AgeRangeChild // 6%
@@ -104,7 +104,7 @@ func (r *Serendipity) AgeRange() AgeRange {
 	return AgeRangeSenior // 16%
 }
 
-func (r *Serendipity) Birthday(ageRange ...AgeRange) time.Time {
+func (r *Serendipity) Birthday(ageRange ...AgeRangeType) time.Time {
 	a := AgeRangeUnknown
 	if len(ageRange) > 0 {
 		a = ageRange[0]

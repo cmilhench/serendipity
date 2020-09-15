@@ -1,4 +1,4 @@
-package pkg
+package serendipity
 
 import (
 	"bytes"
@@ -6,32 +6,32 @@ import (
 	"encoding/json"
 )
 
-type Gender int
+type GenderType int
 
 const (
-	GenderUnknown Gender = iota
+	GenderUnknown GenderType = iota
 	GenderMale
 	GenderFemale
 )
 
-var genderText = map[Gender]string{
+var genderText = map[GenderType]string{
 	GenderUnknown: "Unknown",
 	GenderMale:    "Male",
 	GenderFemale:  "Female",
 }
 
-func GenderText(code Gender) string {
+func GenderText(code GenderType) string {
 	return genderText[code]
 }
 
-func (enum Gender) String() string {
+func (enum GenderType) String() string {
 	if val, ok := genderText[enum]; ok {
 		return val
 	}
 	return genderText[GenderUnknown]
 }
 
-func (s *Gender) Scan(value interface{}) error {
+func (s *GenderType) Scan(value interface{}) error {
 	*s = GenderUnknown
 	bytes, ok := value.([]byte)
 	if !ok {
@@ -49,18 +49,18 @@ func (s *Gender) Scan(value interface{}) error {
 	}
 	return nil
 }
-func (s Gender) Value() (driver.Value, error) {
+func (s GenderType) Value() (driver.Value, error) {
 	return GenderText(s), nil
 }
 
-func (s Gender) MarshalJSON() ([]byte, error) {
+func (s GenderType) MarshalJSON() ([]byte, error) {
 	buffer := bytes.NewBufferString(`"`)
 	buffer.WriteString(GenderText(s))
 	buffer.WriteString(`"`)
 	return buffer.Bytes(), nil
 }
 
-func (s *Gender) UnmarshalJSON(b []byte) error {
+func (s *GenderType) UnmarshalJSON(b []byte) error {
 	var j string
 	err := json.Unmarshal(b, &j)
 	if err != nil {
@@ -69,7 +69,7 @@ func (s *Gender) UnmarshalJSON(b []byte) error {
 	return s.Scan([]byte(j))
 }
 
-func (r *Serendipity) Gender() Gender {
+func (r *Serendipity) Gender() GenderType {
 	if r.Bool() {
 		return GenderMale
 	} else {

@@ -1,4 +1,4 @@
-package pkg
+package serendipity
 
 import (
 	"fmt"

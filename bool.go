@@ -1,4 +1,4 @@
-package pkg
+package serendipity
 
 func (r *Serendipity) Bool(likeliness ...float64) bool {
 	l := .5

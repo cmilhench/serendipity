@@ -1,4 +1,4 @@
-package pkg
+package serendipity
 
 import (
 	"fmt"
@@ -20,7 +20,7 @@ func TestBirthday(t *testing.T) {
 	r := New()
 	r.Seed(time.Now().Unix())
 	var tests = []struct {
-		arg AgeRange
+		arg AgeRangeType
 	}{
 		{AgeRangeUnknown},
 		{AgeRangeChild},

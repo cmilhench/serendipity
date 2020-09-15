@@ -1,4 +1,4 @@
-package pkg
+package serendipity
 
 import (
 	"fmt"
@@ -95,7 +95,7 @@ func (r *Serendipity) Timezone() string {
 	return (*obj)[i]
 }
 
-type Address struct {
+type AddressInfo struct {
 	Street     string `json:"street_address"`
 	Locality   string `json:"locality"`
 	Region     string `json:"region"`
@@ -103,9 +103,9 @@ type Address struct {
 	Country    string `json:"country"`
 }
 
-func (r *Serendipity) Address() *Address {
+func (r *Serendipity) Address() *AddressInfo {
 	ctry := r.Country()
-	addr := Address{
+	addr := AddressInfo{
 		Street:     fmt.Sprintf("%d %s", r.N(1, 2999), r.Street()),
 		Locality:   r.Locality(),
 		Region:     r.Region(),
