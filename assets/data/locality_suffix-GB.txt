@@ -1,0 +1,76 @@
+Aberdeen,Aberdeen City,Scotland
+Armagh,Armagh City, Banbridge and Craigavon,Northern Ireland
+Bangor,Gwynedd,Wales
+Bath,Bath and North East Somerset,England
+Belfast,Belfast,Northern Ireland
+Birmingham,West Midlands,England
+Bradford,West Yorkshire,England
+Brighton and Hove,East Sussex,England
+Bristol,Bristol City,England
+Cambridge,Cambridgeshire,England
+Canterbury,Kent,England
+Cardiff,Cardiff,Wales
+Carlisle,Cumbria,England
+Chelmsford,Essex,England
+Chester,Cheshire West and Chester,England
+Chichester,West Sussex,England
+Colchester,Essex,England
+Coventry,West Midlands,England
+Derby,Derby,England
+Doncaster,South Yorkshire,England
+Dundee,Dundee City Council,Scotland
+Dunfermline,Fife,Scotland
+Durham,County Durham,England
+Edinburgh,Edinburgh,Scotland
+Ely,Cambridgeshire,England
+Exeter,Devon,England
+Glasgow,Glasgow City,Scotland
+Gloucester,Gloucestershire,England
+Hereford,Herefordshire,England
+Inverness,Highland Council,Scotland
+Kingston-upon-Hull,Kingston upon Hull,England
+Lancaster,Lancashire,England
+Leeds,West Yorkshire,England
+Leicester,Leicester,England
+Lichfield,Staffordshire,England
+Lincoln,Lincolnshire,England
+Lisburn,Lisburn and Castlereagh,Northern Ireland
+Liverpool,Merseyside,England
+London,Greater London,England
+Londonderry,Derry and Strabane,Northern Ireland
+Manchester,Greater Manchester,England
+Milton Keynes,Buckinghamshire,England
+Newcastle-upon-Tyne,Tyne and Wear,England
+Newport,Newport,Wales
+Newry,Newry, Mourne and Down,Northern Ireland
+Norwich,Norfolk,England
+Nottingham,Nottingham,England
+Oxford,Oxfordshire,England
+Perth,Perth and Kinross,Scotland
+Peterborough,Peterborough,England
+Plymouth,Plymouth,England
+Portsmouth,Portsmouth,England
+Preston,Lancashire,England
+Ripon,North Yorkshire,England
+Salford,Greater Manchester,England
+Salisbury,Wiltshire,England
+Sheffield,South Yorkshire,England
+Southampton,Southampton,England
+Southend-on-Sea,Southend-on-Sea,England
+St Albans,Hertfordshire,England
+St Asaph,Denbighshire,Wales
+St Davids,Pembrokeshire,Wales
+Stevenage,Hertfordshire,England
+Stirling,Stirling,Scotland
+Stoke on Trent,Staffordshire,England
+Sunderland,Tyne and Wear,England
+Swansea,Swansea,Wales
+Truro,Cornwall,England
+Wakefield,West Yorkshire,England
+Wells,Somerset,England
+Westminster,Greater London,England
+Winchester,Hampshire,England
+Wolverhampton,West Midlands,England
+Worcester,Worcestershire,England
+Wrexham,Wrexham Principal Area,Wales
+York,York,England

@@ -11,12 +11,15 @@ Cambridge
 Canterbury
 Cardiff
 Carlisle
+Chelmsford
 Chester
 Chichester
-City of London
+Colchester
 Coventry
 Derby
+Doncaster
 Dundee
+Dunfermline
 Durham
 Edinburgh
 Ely
@@ -25,21 +28,25 @@ Glasgow
 Gloucester
 Hereford
 Inverness
-Kingston upon Hull
+Kingston-upon-Hull
+Lancaster
 Leeds
 Leicester
 Lichfield
 Lincoln
 Lisburn
 Liverpool
+London
 Londonderry
 Manchester
-Newcastle upon Tyne
+Milton Keynes
+Newcastle-upon-Tyne
 Newport
 Newry
 Norwich
 Nottingham
 Oxford
+Perth
 Peterborough
 Plymouth
 Portsmouth
@@ -49,11 +56,13 @@ Salford
 Salisbury
 Sheffield
 Southampton
-Stevenage
+Southend-on-Sea
 St Albans
+St Asaph
 St Davids
+Stevenage
 Stirling
-Stoke-on-Trent
+Stoke on Trent
 Sunderland
 Swansea
 Truro
@@ -63,4 +72,5 @@ Westminster
 Winchester
 Wolverhampton
 Worcester
+Wrexham
 York

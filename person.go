@@ -136,7 +136,8 @@ func (r *Serendipity) Person() *PersonInfo {
 	}
 	familyName := r.FamilyName()
 	username := r.Username()
-	email := strings.ToLower(fmt.Sprintf("%s%s%d@%s", givenName, string(familyName[0]), r.N(0, 10), r.Domain()))
+	domain := "example.com" //r.Domain()
+	email := strings.ToLower(fmt.Sprintf("%s%s%d@%s", givenName, string(familyName[0]), r.N(1, 9), domain))
 	var parts []string
 	for _, s := range []string{givenName, middleName, familyName} {
 		if strings.TrimSpace(s) != "" {
@@ -152,9 +153,9 @@ func (r *Serendipity) Person() *PersonInfo {
 		MiddleName:          middleName,
 		Nickname:            "",
 		Username:            username,
-		Profile:             fmt.Sprintf("https://%s/%s/%s", r.Domain(), "profile", username),
-		Picture:             fmt.Sprintf("https://%s/%s/%s.jpg", r.Domain(), "pictures", r.FakeWord()),
-		Website:             fmt.Sprintf("https://%s", r.Domain()),
+		Profile:             fmt.Sprintf("https://%s/%s/%s", domain, "profile", username),
+		Picture:             fmt.Sprintf("https://%s/%s/%s/%s.jpg", domain, "pictures", username, r.FakeWord()),
+		Website:             fmt.Sprintf("https://%s", domain),
 		Email:               email,
 		EmailVerified:       r.Bool(.9),
 		Gender:              gender,
